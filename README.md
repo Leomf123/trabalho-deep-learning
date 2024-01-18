@@ -6,9 +6,8 @@ Ouro Preto - MG. 02/23.
 Leonardo Macedo Freire.
 
 Esse algoritmo usa o DEC - algoritmo descrito aqui:
-https://arxiv.org/abs/1511.06335 por meio de um pacote 
-- implementação não oficial, junto com um autoencoder 
-implementado por mim.
+https://arxiv.org/abs/1511.06335 por meio de um pacote - implementação não oficial,
+junto com um autoencoder implementado por mim.
 
 Instruções:
 
