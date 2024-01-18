@@ -30,20 +30,6 @@ class DAE(torch.nn.Module):
             torch.nn.Linear(300, 784),
         )
 
-    def get_stack(self, index):
-        """
-        Given an index which is in [0, len(self.dimensions) - 2] return the corresponding subautoencoder
-        for layer-wise pretraining.
-
-        :param index: subautoencoder index
-        :return: tuple of encoder and decoder units
-        """
-        if (index > len(self.dimensions) - 2) or (index < 0):
-            raise ValueError(
-                "Requested subautoencoder cannot be constructed, index out of range."
-            )
-        return self.encoder[index].linear, self.decoder[-(index + 1)].linear
-        
     def forward(self, x):
         z = self.encoder(x)
         return self.decoder(z)
